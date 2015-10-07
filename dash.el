@@ -1896,6 +1896,10 @@ not, return a list with ARGS as elements."
   (let ((arg (car args)))
     (if (listp arg) arg args)))
 
+(defun -sample (list)
+  "Return a random element from the LIST."
+    (nth (random (length list)) list))
+
 (defun -repeat (n x)
   "Return a list with X repeated N times.
 Return nil if N is less than 1."
